@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10 💗</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Dancing Script & Be Vietnam Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --pink-primary: #ff6b9d;
+      --rose-deep: #e91e63;
+      --lavender-soft: #f3e5f5;
+      --cream-warm: #fffdf9;
+      --text-wine: #4a2538;
+      --text-muted: #6d3b53;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      color: var(--text-wine);
+      background: linear-gradient(180deg, #fff9fb 0%, #fce4ec 26%, #f3e5f5 54%, #fffdf9 80%, #ffdde1 100%);
+      overflow-x: hidden;
+      margin: 0;
+    }
+
+    .font-script {
+      font-family: 'Dancing Script', cursive;
+    }
+
+    /* Glassmorphism Utilities */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 182, 193, 0.65);
+      box-shadow: 0 18px 40px -12px rgba(216, 96, 140, 0.16);
+    }
+
+    .glass-pill {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(244, 143, 177, 0.5);
+    }
+
+    /* Keyframe Animations */
+    @keyframes floatGentle {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(1.2deg); }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 18px rgba(255, 107, 157, 0.5), 0 8px 24px rgba(233, 30, 99, 0.25);
+      }
+      50% {
+        box-shadow: 0 0 34px rgba(255, 107, 157, 0.85), 0 12px 34px rgba(233, 30, 99, 0.42);
+      }
+    }
+
+    @keyframes swayFlower {
+      0%, 100% { transform: rotate(-3.5deg); }
+      50% { transform: rotate(3.5deg); }
+    }
+
+    @keyframes butterflyWing {
+      0%, 100% { transform: scaleX(1) translateY(0px); }
+      50% { transform: scaleX(0.65) translateY(-4px); }
+    }
+
+    @keyframes burstFly {
+      0% {
+        transform: translate(-50%, -50%) scale(0.3) rotate(0deg);
+        opacity: 1;
+      }
+      80% {
+        opacity: 0.95;
+      }
+      100% {
+        transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(1.25) rotate(var(--rot));
+        opacity: 0;
+      }
+    }
+
+    @keyframes floatUpHeart {
+      0% {
+        transform: translateY(0) scale(0.7) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-220px) scale(1.35) rotate(var(--rot));
+        opacity: 0;
+      }
+    }
+
+    @keyframes eqBar {
+      0%, 100% { height: 5px; }
+      50% { height: 16px; }
+    }
+
+    .animate-float-gentle {
+      animation: floatGentle 5.2s ease-in-out infinite;
+    }
+
+    .animate-pulse-glow {
+      animation: pulseGlow 2.6s ease-in-out infinite;
+    }
+
+    .animate-sway {
+      transform-origin: bottom center;
+      animation: swayFlower 4s ease-in-out infinite;
+    }
+
+    .animate-butterfly {
+      transform-origin: center;
+      animation: butterflyWing 0.9s ease-in-out infinite;
+    }
+
+    /* Interactive 3D Envelope Styles */
+    .envelope-wrapper {
+      perspective: 1200px;
+    }
+
+    .envelope-flap {
+      transform-origin: top center;
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .envelope-open .envelope-flap {
+      transform: rotateX(180deg);
+    }
+
+    .wax-seal {
+      transition: transform 0.45s ease, box-shadow 0.45s ease;
+    }
+
+    .envelope-open .wax-seal {
+      transform: scale(0.88) rotate(12deg);
+    }
+
+    /* Letter Line-by-line Reveal */
+    .letter-line {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .letter-line.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Interactive 3D Gift Box Lid */
+    #gift-lid-group {
+      transform-origin: 65px 105px;
+      transition: transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .gift-open #gift-lid-group {
+      transform: translate(-26px, -62px) rotate(-26deg);
+    }
+
+    .gift-emerging-flowers {
+      opacity: 0;
+      transform: translateY(35px) scale(0.6);
+      transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .gift-open .gift-emerging-flowers {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* 3D Tilt Card Transition */
+    .wish-tilt-card {
+      transform-style: preserve-3d;
+      transition: transform 0.22s ease-out, box-shadow 0.3s ease;
+      will-change: transform;
+    }
+
+    /* Music Equalizer Bars */
+    .eq-bar {
+      width: 3px;
+      background: currentColor;
+      border-radius: 999px;
+      height: 5px;
+    }
+
+    .music-playing .eq-bar:nth-child(1) { animation: eqBar 0.6s ease-in-out infinite 0s; }
+    .music-playing .eq-bar:nth-child(2) { animation: eqBar 0.6s ease-in-out infinite 0.18s; }
+    .music-playing .eq-bar:nth-child(3) { animation: eqBar 0.6s ease-in-out infinite 0.35s; }
+    .music-playing .eq-bar:nth-child(4) { animation: eqBar 0.6s ease-in-out infinite 0.12s; }
+
+    /* Reduced Motion Support */
+    @media (prefers-reduced-motion: reduce) {
+      .animate-float-gentle,
+      .animate-pulse-glow,
+      .animate-sway,
+      .animate-butterfly {
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="selection:bg-pink-200 selection:text-pink-900">
+
+  <!-- =====================================================================
+       BACKGROUND HTML5 CANVAS PARTICLE SYSTEM
+       (Falling Rose Petals, Floating Hearts, Twinkling Stars, Butterflies)
+  ====================================================================== -->
+  <canvas
+    id="ambient-canvas"
+    class="fixed inset-0 pointer-events-none z-10 w-full h-full"
+    aria-hidden="true"
+  ></canvas>
+
+  <!-- Interactive Burst Confetti & Hearts Overlay Container -->
+  <div
+    id="burst-layer"
+    class="fixed inset-0 pointer-events-none z-50 overflow-hidden"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Toast Notification Pill -->
+  <div
+    id="toast-banner"
+    class="fixed top-20 left-1/2 -translate-x-1/2 z-50 glass-pill px-5 py-2.5 rounded-full shadow-xl text-sm font-semibold text-pink-800 flex items-center gap-2 transition-all duration-300 opacity-0 -translate-y-4 pointer-events-none"
+    role="status"
+    aria-live="polite"
+  >
+    <span>✨</span>
+    <span id="toast-text">Đã sao chép lời chúc!</span>
+  </div>
+
+  <!-- =====================================================================
+       FLOATING GLASSMORPHISM NAVIGATION BAR
+  ====================================================================== -->
+  <header class="sticky top-0 z-40 px-3 sm:px-6 py-2.5">
+    <nav
+      aria-label="Điều hướng trang 20/10"
+      class="max-w-6xl mx-auto glass-pill rounded-full px-3.5 sm:px-6 py-2.5 shadow-md flex items-center justify-between gap-2"
+    >
+      <!-- Brand Logo -->
+      <a
+        href="#hero-section"
+        class="flex items-center gap-2 text-left group focus:outline-none"
+      >
+        <span class="w-9 h-9 rounded-full bg-gradient-to-tr from-pink-500 to-rose-400 flex items-center justify-center text-white shadow-sm group-hover:scale-110 transition-transform text-lg">
+          🌷
+        </span>
+        <div>
+          <span class="font-script text-xl sm:text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+            Happy 20/10
+          </span>
+          <span class="hidden md:inline-block ml-2 text-xs font-semibold text-pink-700 bg-pink-100/90 px-2.5 py-0.5 rounded-full">
+            Ngày Phụ Nữ Việt Nam
+          </span>
+        </div>
+      </a>
+
+      <!-- Section Navigation Links -->
+      <div class="hidden lg:flex items-center gap-1 text-xs xl:text-sm font-semibold text-pink-900/85">
+        <a href="#hero-section" class="px-3 py-1.5 rounded-full hover:bg-pink-100/90 hover:text-pink-700 transition-colors">Mở Đầu</a>
+        <a href="#letter-section" class="px-3 py-1.5 rounded-full hover:bg-pink-100/90 hover:text-pink-700 transition-colors">Thư Yêu Thương 💌</a>
+        <a href="#gift-section" class="px-3 py-1.5 rounded-full hover:bg-pink-100/90 hover:text-pink-700 transition-colors">Hộp Quà 🎁</a>
+        <a href="#wishes-section" class="px-3 py-1.5 rounded-full hover:bg-pink-100/90 hover:text-pink-700 transition-colors">Lời Chúc Hay 🌸</a>
+        <a href="#gallery-section" class="px-3 py-1.5 rounded-full hover:bg-pink-100/90 hover:text-pink-700 transition-colors">Thanh Xuân 📸</a>
+        <a href="#generator-section" class="px-3 py-1.5 rounded-full hover:bg-pink-100/90 hover:text-pink-700 transition-colors">Bốc Lời Chúc ✨</a>
+        <a href="#closing-section" class="px-3 py-1.5 rounded-full hover:bg-pink-100/90 hover:text-pink-700 transition-colors">Gửi Tim ❤️</a>
+      </div>
+
+      <!-- Particle & Music Quick Controls -->
+      <div class="flex items-center gap-1.5 sm:gap-2">
+        <button
+          id="toggle-particles-btn"
+          type="button"
+          class="px-3 py-1.5 rounded-full text-xs font-semibold bg-pink-100 text-pink-700 border border-pink-200 hover:bg-pink-200/70 transition-all flex items-center gap-1"
+          title="Bật / Tắt hiệu ứng cánh hoa rơi"
+        >
+          <span>🌸</span>
+          <span class="hidden sm:inline" id="particles-status-label">Hoa rơi: Bật</span>
+        </button>
+
+        <button
+          id="nav-music-btn"
+          type="button"
+          class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-white text-pink-700 border border-pink-200 hover:bg-pink-50 shadow-sm transition-all flex items-center gap-1.5"
+        >
+          <span id="nav-music-icon">🎵</span>
+          <span id="nav-music-label">Bật Nhạc</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =====================================================================
+       FLOATING WEB AUDIO MUSIC PLAYER BAR (BOTTOM RIGHT)
+  ====================================================================== -->
+  <aside
+    aria-label="Trình phát nhạc nền 20/10"
+    class="fixed bottom-4 right-4 z-40 glass-pill rounded-full px-3.5 py-2 shadow-xl flex items-center gap-2 border border-pink-300/80"
+  >
+    <button
+      id="floating-play-btn"
+      type="button"
+      class="w-9 h-9 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white flex items-center justify-center shadow hover:scale-105 active:scale-95 transition-transform"
+      title="Phát / Tạm dừng nhạc nền 20/10"
+      aria-label="Phát hoặc tạm dừng nhạc nền"
+    >
+      <!-- Play SVG Icon -->
+      <svg id="play-svg" class="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M8 5v14l11-7z" />
+      </svg>
+      <!-- Pause SVG Icon -->
+      <svg id="pause-svg" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+      </svg>
+    </button>
+
+    <div class="pr-1">
+      <div class="flex items-center gap-1.5">
+        <span id="music-title-display" class="text-xs font-bold text-pink-800 max-w-[135px] sm:max-w-[170px] truncate">
+          Hộp Nhạc 20/10 Ngọt Ngào
+        </span>
+        <!-- Animated Equalizer Icon -->
+        <div id="eq-container" class="flex items-end gap-0.5 h-4 text-pink-500">
+          <span class="eq-bar"></span>
+          <span class="eq-bar"></span>
+          <span class="eq-bar"></span>
+          <span class="eq-bar"></span>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 text-[11px] text-pink-600">
+        <button id="switch-melody-btn" type="button" class="hover:underline font-medium">
+          Đổi giai điệu 🎶
+        </button>
+      </div>
+    </div>
+
+    <button
+      id="floating-mute-btn"
+      type="button"
+      class="w-8 h-8 rounded-full bg-pink-100 text-pink-700 hover:bg-pink-200 flex items-center justify-center transition-colors text-xs"
+      title="Tắt / Bật tiếng"
+      aria-label="Tắt hoặc bật tiếng"
+    >
+      <span id="mute-icon">🔊</span>
+    </button>
+  </aside>
+
+  <!-- =====================================================================
+       SECTION 1: HERO SECTION – THE FIRST IMPRESSION
+  ====================================================================== -->
+  <section
+    id="hero-section"
+    class="relative min-h-[92vh] flex flex-col justify-center items-center px-4 sm:px-6 pt-6 pb-16 overflow-hidden z-20"
+  >
+    <!-- Soft Ambient Glows -->
+    <div class="absolute top-10 left-6 w-72 h-72 rounded-full bg-pink-300/30 blur-3xl pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute bottom-10 right-6 w-80 h-80 rounded-full bg-purple-300/30 blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+    <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+      <!-- Left Column: Romantic Headlines & Action Buttons -->
+      <div class="lg:col-span-7 text-center lg:text-left space-y-5">
+        <!-- Theme Banner -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-pill shadow-sm text-xs sm:text-sm font-bold text-pink-700">
+          <span class="animate-spin inline-block" style="animation-duration: 6s;">✨</span>
+          <span>20/10 – Chúc Các Bạn Nữ Luôn Xinh Đẹp, Hạnh Phúc Và Rạng Rỡ!</span>
+        </div>
+
+        <!-- Large Animated Script Title -->
+        <h2 class="font-script text-4xl sm:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-pink-600 via-rose-500 to-purple-600 bg-clip-text text-transparent drop-shadow-sm py-1">
+          Happy Vietnamese Women's Day 💗
+        </h2>
+
+        <!-- Main Vietnamese Heading -->
+        <h1 class="text-2xl sm:text-4xl xl:text-5xl font-extrabold tracking-tight text-[#4a2538] leading-tight">
+          Chúc Mừng Ngày Phụ Nữ Việt Nam
+          <span class="inline-block px-3.5 py-0.5 rounded-2xl bg-gradient-to-r from-pink-500 to-rose-400 text-white shadow-md">
+            20/10
+          </span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-base sm:text-lg xl:text-xl text-[#6d3b53] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+          Gửi đến những cô gái tuyệt vời nhất những lời chúc ngọt ngào và chân thành nhất!
+        </p>
+
+        <!-- Primary & Secondary CTA Buttons -->
+        <div class="pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+          <button
+            id="hero-open-gift-btn"
+            type="button"
+            class="animate-pulse-glow px-7 py-4 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 text-white font-bold text-base sm:text-lg flex items-center gap-2.5 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+          >
+            <span>Mở Hộp Quà Yêu Thương 🎁</span>
+          </button>
+
+          <a
+            href="#letter-section"
+            class="px-6 py-4 rounded-full glass-pill text-pink-800 font-bold text-base hover:bg-pink-100/80 hover:scale-105 transition-all flex items-center gap-2 shadow-sm"
+          >
+            <span>💌 Đọc Thư Gửi Các Bạn Nữ</span>
+          </a>
+        </div>
+
+        <!-- Interactive Hint -->
+        <div class="pt-1 flex flex-wrap items-center justify-center lg:justify-start gap-2 text-xs sm:text-sm text-pink-800/85">
+          <span class="inline-flex items-center gap-1.5 bg-white/75 px-3.5 py-1.5 rounded-full border border-pink-200">
+            🌷 Mẹo nhỏ: Hãy chạm vào từng bông hoa trong bó hoa bên cạnh để nhận lời nhắn dễ thương!
+          </span>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Animated SVG Flower Bouquet -->
+      <div class="lg:col-span-5 flex flex-col items-center justify-center">
+        <div class="relative w-full max-w-[380px] sm:max-w-[430px] mx-auto select-none">
+          <!-- Glowing Backdrop Aura -->
+          <div
+            class="absolute inset-4 rounded-full blur-3xl opacity-75 pointer-events-none"
+            style="background: radial-gradient(circle, rgba(255,141,161,0.58) 0%, rgba(225,190,231,0.48) 55%, rgba(255,253,249,0) 100%);"
+          ></div>
+
+          <!-- Tooltip for Bouquet Flower Clicks -->
+          <div
+            id="bouquet-tooltip"
+            class="absolute -top-3 left-1/2 -translate-x-1/2 z-30 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full shadow-lg border border-pink-200 text-xs sm:text-sm font-bold text-pink-700 whitespace-nowrap transition-all duration-300 opacity-0 -translate-y-2 pointer-events-none"
+          >
+            ✨ Hoa Hồng Nữ Hoàng 20/10 💖
+          </div>
+
+          <!-- Custom SVG Bouquet of Roses, Tulips, Daisies, Ribbons & Butterflies -->
+          <svg
+            id="hero-bouquet-svg"
+            viewBox="0 0 420 450"
+            class="w-full h-auto drop-shadow-[0_18px_32px_rgba(216,96,140,0.24)] animate-float-gentle"
+            role="img"
+            aria-label="Bó hoa chúc mừng Ngày Phụ nữ Việt Nam 20/10"
+          >
+            <defs>
+              <linearGradient id="wrapBack" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fde2e8" />
+                <stop offset="100%" stop-color="#f3d1dc" />
+              </linearGradient>
+              <linearGradient id="wrapFront" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fff5f7" />
+                <stop offset="50%" stop-color="#ffe4ec" />
+                <stop offset="100%" stop-color="#f8bbd0" />
+              </linearGradient>
+              <linearGradient id="wrapInner" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#f3e5f5" />
+                <stop offset="100%" stop-color="#e1bee7" />
+              </linearGradient>
+              <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ff6b9d" />
+                <stop offset="50%" stop-color="#ec407a" />
+                <stop offset="100%" stop-color="#c2185b" />
+              </linearGradient>
+              <radialGradient id="rosePink" cx="50%" cy="45%" r="55%">
+                <stop offset="0%" stop-color="#fff0f5" />
+                <stop offset="45%" stop-color="#ff8da1" />
+                <stop offset="100%" stop-color="#e91e63" />
+              </radialGradient>
+              <radialGradient id="roseSoft" cx="50%" cy="45%" r="55%">
+                <stop offset="0%" stop-color="#ffffff" />
+                <stop offset="55%" stop-color="#ffb6c1" />
+                <stop offset="100%" stop-color="#f06292" />
+              </radialGradient>
+              <linearGradient id="tulipLav" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#f3e5f5" />
+                <stop offset="55%" stop-color="#ce93d8" />
+                <stop offset="100%" stop-color="#8e24aa" />
+              </linearGradient>
+              <linearGradient id="tulipCoral" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffe0b2" />
+                <stop offset="50%" stop-color="#ff8a80" />
+                <stop offset="100%" stop-color="#e53935" />
+              </linearGradient>
+              <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#81c784" />
+                <stop offset="100%" stop-color="#388e3c" />
+              </linearGradient>
+            </defs>
+
+            <!-- Back Wrapping Paper -->
+            <path d="M75,180 Q210,110 345,180 L275,380 Q210,400 145,380 Z" fill="url(#wrapBack)" stroke="#f8bbd0" stroke-width="2" />
+            <path d="M95,160 Q210,125 325,160 L265,360 L155,360 Z" fill="url(#wrapInner)" opacity="0.82" />
+
+            <!-- Flower Stems -->
+            <g stroke="#4caf50" stroke-width="3.5" fill="none" stroke-linecap="round">
+              <path d="M210,320 Q150,220 115,120" />
+              <path d="M210,320 Q270,220 305,120" />
+              <path d="M210,320 Q180,200 170,95" />
+              <path d="M210,320 Q240,200 255,95" />
+              <path d="M210,320 L210,85" />
+            </g>
+
+            <!-- Lush Green Leaves -->
+            <g fill="url(#leafGrad)">
+              <path d="M115,155 Q80,130 95,105 Q125,120 115,155 Z" />
+              <path d="M305,155 Q340,130 325,105 Q295,120 305,155 Z" />
+              <path d="M145,120 Q120,85 145,70 Q165,90 145,120 Z" />
+              <path d="M275,120 Q300,85 275,70 Q255,90 275,120 Z" />
+              <path d="M195,95 Q210,55 225,95 Z" />
+            </g>
+
+            <!-- Baby's Breath Tiny White Blossoms -->
+            <g fill="#ffffff" opacity="0.95">
+              <circle cx="102" cy="138" r="5" fill="#fffdf9" stroke="#f8bbd0" stroke-width="1" />
+              <circle cx="128" cy="92" r="5" fill="#fffdf9" stroke="#f8bbd0" stroke-width="1" />
+              <circle cx="168" cy="78" r="5" fill="#fffdf9" stroke="#f8bbd0" stroke-width="1" />
+              <circle cx="210" cy="68" r="5" fill="#fffdf9" stroke="#f8bbd0" stroke-width="1" />
+              <circle cx="252" cy="78" r="5" fill="#fffdf9" stroke="#f8bbd0" stroke-width="1" />
+              <circle cx="295" cy="95" r="5" fill="#fffdf9" stroke="#f8bbd0" stroke-width="1" />
+              <circle cx="322" cy="135" r="5" fill="#fffdf9" stroke="#f8bbd0" stroke-width="1" />
+            </g>
+
+            <!-- Left Lavender Tulip -->
+            <g class="bouquet-flower cursor-pointer transition-transform duration-300 hover:scale-105" data-flower="Hoa Tulip Tím Mộng Mơ & Tinh Tế 🌷">
+              <path d="M110,175 C95,140 115,115 130,135 C135,112 150,112 152,135 C168,118 182,145 162,175 C148,192 124,192 110,175 Z" fill="url(#tulipLav)" />
+              <path d="M122,172 Q136,145 152,172" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.6" />
+            </g>
+
+            <!-- Right Coral Tulip -->
+            <g class="bouquet-flower cursor-pointer transition-transform duration-300 hover:scale-105" data-flower="Hoa Tulip Hồng Rạng Rỡ Năng Lượng 🌷">
+              <path d="M258,175 C240,145 255,118 270,135 C272,112 288,112 292,135 C308,115 325,140 310,175 C296,192 272,192 258,175 Z" fill="url(#tulipCoral)" />
+              <path d="M270,172 Q284,145 298,172" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.6" />
+            </g>
+
+            <!-- Top Left Soft Rose -->
+            <g class="bouquet-flower cursor-pointer transition-transform duration-300 hover:scale-105" data-flower="Hoa Hồng Phấn Dịu Dàng Đáng Yêu 🌹">
+              <circle cx="170" cy="135" r="34" fill="url(#roseSoft)" />
+              <path d="M152,132 Q170,112 188,132 Q175,152 155,142 Q165,125 178,132" fill="none" stroke="#fff5f7" stroke-width="2.5" stroke-linecap="round" />
+            </g>
+
+            <!-- Top Right Soft Rose -->
+            <g class="bouquet-flower cursor-pointer transition-transform duration-300 hover:scale-105" data-flower="Hoa Hồng Ngọt Ngào Tỏa Nắng 🌹">
+              <circle cx="250" cy="135" r="34" fill="url(#roseSoft)" />
+              <path d="M232,132 Q250,112 268,132 Q255,152 235,142 Q245,125 258,132" fill="none" stroke="#fff5f7" stroke-width="2.5" stroke-linecap="round" />
+            </g>
+
+            <!-- Center Queen Rose -->
+            <g class="bouquet-flower cursor-pointer transition-transform duration-300 hover:scale-105" data-flower="Hoa Hồng Nữ Hoàng 20/10 – Luôn Tỏa Sáng Nhé! 💖">
+              <circle cx="210" cy="168" r="42" fill="url(#rosePink)" />
+              <circle cx="210" cy="164" r="29" fill="url(#roseSoft)" opacity="0.85" />
+              <path d="M192,162 C198,144 222,144 228,162 C222,178 198,178 196,164 C202,154 218,154 220,164" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+            </g>
+
+            <!-- White Daisies -->
+            <g class="bouquet-flower cursor-pointer" transform="translate(155, 202)" data-flower="Cúc Họa Mi Trong Trẻo Thanh Xuân 🌼">
+              <circle cx="0" cy="-13" r="6" fill="#fffdf9" />
+              <circle cx="11" cy="-7" r="6" fill="#fffdf9" />
+              <circle cx="11" cy="7" r="6" fill="#fffdf9" />
+              <circle cx="0" cy="13" r="6" fill="#fffdf9" />
+              <circle cx="-11" cy="7" r="6" fill="#fffdf9" />
+              <circle cx="-11" cy="-7" r="6" fill="#fffdf9" />
+              <circle cx="0" cy="0" r="8.5" fill="#ffca28" stroke="#f57f17" stroke-width="1.5" />
+            </g>
+
+            <g class="bouquet-flower cursor-pointer" transform="translate(265, 202)" data-flower="Cúc Trắng Tinh Khôi & Bình Yên 🌼">
+              <circle cx="0" cy="-13" r="6" fill="#fffdf9" />
+              <circle cx="11" cy="-7" r="6" fill="#fffdf9" />
+              <circle cx="11" cy="7" r="6" fill="#fffdf9" />
+              <circle cx="0" cy="13" r="6" fill="#fffdf9" />
+              <circle cx="-11" cy="7" r="6" fill="#fffdf9" />
+              <circle cx="-11" cy="-7" r="6" fill="#fffdf9" />
+              <circle cx="0" cy="0" r="8.5" fill="#ffca28" stroke="#f57f17" stroke-width="1.5" />
+            </g>
+
+            <g class="bouquet-flower cursor-pointer" transform="translate(210, 110)" data-flower="Hoa Cúc Nắng Mai Rạng Ngời 🌼">
+              <circle cx="0" cy="-13" r="6" fill="#fffdf9" />
+              <circle cx="11" cy="-7" r="6" fill="#fffdf9" />
+              <circle cx="11" cy="7" r="6" fill="#fffdf9" />
+              <circle cx="0" cy="13" r="6" fill="#fffdf9" />
+              <circle cx="-11" cy="7" r="6" fill="#fffdf9" />
+              <circle cx="-11" cy="-7" r="6" fill="#fffdf9" />
+              <circle cx="0" cy="0" r="8.5" fill="#ffca28" stroke="#f57f17" stroke-width="1.5" />
+            </g>
+
+            <!-- Front Wrapping Paper Cone -->
+            <path d="M85,205 Q150,245 210,235 Q270,245 335,205 L272,390 Q210,415 148,390 Z" fill="url(#wrapFront)" stroke="#f48fb1" stroke-width="2" />
+            <path d="M115,220 L175,392 M305,220 L245,392" stroke="#f8bbd0" stroke-width="2" opacity="0.7" />
+            <path d="M175,395 L168,428 M195,400 L192,434 M210,402 L210,436 M225,400 L228,434 M245,395 L252,428" stroke="#388e3c" stroke-width="4.5" stroke-linecap="round" />
+
+            <!-- Satin Ribbon & Bow -->
+            <g transform="translate(210, 325)" class="bouquet-flower cursor-pointer" data-flower="Nơ Lụa Yêu Thương Gửi Các Bạn Nữ Lớp Mình 🎀">
+              <path d="M-10,10 Q-35,55 -52,92 L-28,85 L-15,98 Q-5,55 0,15 Z" fill="url(#ribbonGrad)" />
+              <path d="M10,10 Q35,55 52,92 L28,85 L15,98 Q5,55 0,15 Z" fill="url(#ribbonGrad)" />
+              <rect x="-52" y="-10" width="104" height="20" rx="10" fill="url(#ribbonGrad)" />
+              <path d="M-6,0 C-45,-36 -75,-10 -55,15 C-40,28 -15,12 -6,4 Z" fill="url(#ribbonGrad)" stroke="#fff0f5" stroke-width="1.5" />
+              <path d="M6,0 C45,-36 75,-10 55,15 C40,28 15,12 6,4 Z" fill="url(#ribbonGrad)" stroke="#fff0f5" stroke-width="1.5" />
+              <circle cx="0" cy="2" r="12" fill="#ad1457" />
+              <path d="M0,7 C-6,2 -9,-2 -5,-6 C-2,-8 0,-5 0,-4 C0,-5 2,-8 5,-6 C9,-2 6,2 0,7 Z" fill="#ffdde1" />
+            </g>
+
+            <!-- Fluttering Butterflies -->
+            <g transform="translate(62, 95) rotate(-18)" class="bouquet-flower cursor-pointer" data-flower="Cánh Bướm Tự Do & Bay Cao 🦋">
+              <g class="animate-butterfly">
+                <path d="M0,0 C-15,-18 -28,-5 -14,8 C-24,18 -8,28 0,12 C8,28 24,18 14,8 C28,-5 15,-18 0,0 Z" fill="#f48fb1" opacity="0.92" />
+                <path d="M0,-4 L0,16" stroke="#4a2538" stroke-width="2" stroke-linecap="round" />
+              </g>
+            </g>
+            <g transform="translate(352, 85) rotate(20)" class="bouquet-flower cursor-pointer" data-flower="Cánh Bướm Mộng Mơ Tuổi Thanh Xuân 🦋">
+              <g class="animate-butterfly">
+                <path d="M0,0 C-14,-16 -25,-4 -12,7 C-20,16 -7,24 0,10 C7,24 20,16 12,7 C25,-4 14,-16 0,0 Z" fill="#ce93d8" opacity="0.92" />
+                <path d="M0,-4 L0,14" stroke="#4a2538" stroke-width="2" stroke-linecap="round" />
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <a
+      href="#letter-section"
+      class="mt-8 flex flex-col items-center gap-1 text-pink-700/80 hover:text-pink-600 transition-colors"
+    >
+      <span class="text-xs font-bold tracking-wider uppercase">Mở bức thư yêu thương</span>
+      <span class="text-lg animate-bounce">↓</span>
+    </a>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 2: PERSONALIZED GREETING SECTION (INTERACTIVE ENVELOPE & LETTER)
+  ====================================================================== -->
+  <section id="letter-section" class="py-16 sm:py-24 px-4 sm:px-6 relative z-20">
+    <div class="max-w-4xl mx-auto">
+      <!-- Section Heading -->
+      <div class="text-center mb-10 space-y-2">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-bold uppercase tracking-wider">
+          💌 Lá Thư Tay Đặc Biệt
+        </span>
+        <h2 class="font-script text-4xl sm:text-5xl font-bold text-pink-700">
+          Lời Nhắn Gửi Từ Trái Tim 🌷
+        </h2>
+        <p class="text-sm sm:text-base text-[#6d3b53]">
+          Chạm vào con dấu sáp trái tim hoặc nút bên dưới để mở phong bì và đọc bức thư 20/10
+        </p>
+      </div>
+
+      <!-- Envelope Action Controls -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-7">
+        <button
+          id="toggle-envelope-btn"
+          type="button"
+          class="px-5 py-2.5 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white text-xs sm:text-sm font-bold shadow-md hover:scale-105 transition-all flex items-center gap-1.5"
+        >
+          <span>✉️ Mở / Phát Lại Hiệu Ứng Viết Thư</span>
+        </button>
+
+        <button
+          id="reveal-full-letter-btn"
+          type="button"
+          class="px-5 py-2.5 rounded-full glass-pill text-pink-700 text-xs sm:text-sm font-bold hover:bg-pink-100 transition-all flex items-center gap-1.5 shadow-sm"
+        >
+          <span>✨ Xem Toàn Bộ Bức Thư Ngay</span>
+        </button>
+      </div>
+
+      <!-- Interactive Wax-Sealed Envelope + Letter Card -->
+      <div id="envelope-container" class="envelope-wrapper envelope-open relative max-w-3xl mx-auto">
+        <!-- Envelope Top Header with Wax Seal -->
+        <div
+          id="envelope-header-bar"
+          class="cursor-pointer bg-gradient-to-r from-pink-200 via-rose-100 to-pink-200 rounded-t-3xl p-4 sm:px-8 border-t border-x border-pink-300 flex items-center justify-between shadow-sm relative overflow-hidden"
+          title="Chạm để đóng/mở phong bì"
+        >
+          <div class="flex items-center gap-2 text-xs sm:text-sm font-bold text-pink-900 z-10">
+            <span>📮 Người nhận: Các bạn nữ thân yêu của lớp mình</span>
+          </div>
+
+          <div
+            class="wax-seal w-11 h-11 rounded-full bg-gradient-to-br from-rose-500 to-pink-700 text-white flex items-center justify-center shadow-lg border-2 border-pink-100 text-lg z-10"
+          >
+            💖
+          </div>
+        </div>
+
+        <!-- Letter Paper Card -->
+        <div
+          class="glass-card rounded-b-3xl p-6 sm:p-10 md:p-12 border-2 border-pink-200/90 relative overflow-hidden"
+          style="background-image: radial-gradient(rgba(244, 143, 177, 0.14) 1px, transparent 1px); background-size: 24px 24px;"
+        >
+          <!-- Decorative Watermarks -->
+          <div class="absolute -top-4 -right-4 text-7xl opacity-15 pointer-events-none select-none">🌷</div>
+          <div class="absolute -bottom-4 -left-4 text-7xl opacity-15 pointer-events-none select-none">🌸</div>
+
+          <!-- Exact Personalized Greeting Content -->
+          <h3 id="letter-line-0" class="letter-line visible font-script text-3xl sm:text-4xl font-bold text-pink-700 mb-6 flex items-center gap-2">
+            <span>Gửi các bạn nữ thân yêu!</span>
+            <span class="text-2xl">🌷</span>
+          </h3>
+
+          <div class="space-y-5 text-base sm:text-lg leading-relaxed text-[#4a2538]">
+            <p id="letter-line-1" class="letter-line">
+              Nhân ngày 20/10, chúc tất cả các bạn luôn xinh đẹp, vui vẻ và tràn đầy năng lượng tích cực. Mong rằng mỗi ngày của các bạn đều có thật nhiều tiếng cười, luôn gặp may mắn trong học tập, đạt được những điều mình mong muốn và được yêu thương thật nhiều.
+            </p>
+            <p id="letter-line-2" class="letter-line">
+              Chúc các bạn lúc nào cũng tự tin, rạng rỡ, mạnh mẽ theo cách riêng của mình. Dù hôm nay hay bất kỳ ngày nào khác, các bạn đều xứng đáng được trân trọng và hạnh phúc.
+            </p>
+            <p id="letter-line-3" class="letter-line">
+              Mong rằng thanh xuân của chúng ta sẽ luôn có những kỷ niệm thật đẹp, những tình bạn đáng quý và thật nhiều khoảnh khắc đáng nhớ bên nhau.
+            </p>
+            <p id="letter-line-4" class="letter-line font-bold text-pink-700 pt-1">
+              Chúc các bạn nữ có một ngày 20/10 thật vui vẻ, ngập tràn hoa, quà, lời chúc và tiếng cười! 🌷💖
+            </p>
+          </div>
+
+          <!-- Letter Signature Footer -->
+          <div class="mt-8 pt-6 border-t border-pink-200/70 flex flex-wrap items-center justify-between gap-4">
+            <span class="text-xs sm:text-sm font-semibold text-pink-700/80">
+              🌸 Kỷ niệm Ngày Phụ nữ Việt Nam 20/10
+            </span>
+            <span class="font-script text-2xl sm:text-3xl font-bold text-pink-600">
+              Thân gửi ngàn yêu thương 💝
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 3: INTERACTIVE 3D-STYLE GIFT BOX
+  ====================================================================== -->
+  <section id="gift-section" class="py-16 sm:py-24 px-4 sm:px-6 relative z-20">
+    <div class="max-w-5xl mx-auto text-center">
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-rose-100 text-rose-700 text-xs font-bold uppercase tracking-wider mb-3">
+        🎁 Món Quà Bất Ngờ
+      </span>
+      <h2 class="font-script text-4xl sm:text-5xl font-bold text-pink-700 mb-3">
+        Hộp Quà Yêu Thương 20/10 💝
+      </h2>
+      <p id="gift-subtitle-text" class="text-sm sm:text-base text-[#6d3b53] max-w-xl mx-auto mb-10">
+        Hãy chạm vào hộp quà 3D lung linh bên dưới để mở nắp hộp và đón nhận điều bất ngờ nhé!
+      </p>
+
+      <!-- 3D Gift Box Interactive Wrapper -->
+      <div id="gift-box-stage" class="relative flex flex-col items-center justify-center my-4">
+        <button
+          id="gift-box-trigger"
+          type="button"
+          aria-label="Mở hộp quà 20/10"
+          class="group relative focus:outline-none cursor-pointer select-none"
+        >
+          <!-- Glowing Aura -->
+          <div
+            id="gift-aura"
+            class="absolute -inset-8 rounded-full blur-2xl bg-pink-400/45 group-hover:bg-pink-400/65 transition-all duration-700"
+          ></div>
+
+          <!-- Emerging Floating Flowers & Hearts When Opened -->
+          <div class="gift-emerging-flowers absolute -top-20 left-1/2 -translate-x-1/2 w-72 flex justify-around pointer-events-none">
+            <span class="text-3xl sm:text-4xl drop-shadow animate-bounce">🌸</span>
+            <span class="text-4xl sm:text-5xl drop-shadow -mt-4 animate-bounce" style="animation-delay: 0.15s;">💝</span>
+            <span class="text-3xl sm:text-4xl drop-shadow animate-bounce" style="animation-delay: 0.3s;">🌷</span>
+            <span class="text-3xl sm:text-4xl drop-shadow -mt-3 animate-bounce" style="animation-delay: 0.2s;">🦋</span>
+            <span class="text-3xl sm:text-4xl drop-shadow animate-bounce" style="animation-delay: 0.4s;">🌹</span>
+          </div>
+
+          <!-- 3D Isometric SVG Gift Box -->
+          <div class="relative w-56 h-56 sm:w-64 sm:h-64 flex items-center justify-center">
+            <svg viewBox="0 0 240 240" class="w-full h-full overflow-visible">
+              <defs>
+                <linearGradient id="boxBody" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ff8da1" />
+                  <stop offset="100%" stop-color="#e91e63" />
+                </linearGradient>
+                <linearGradient id="boxSide" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#f06292" />
+                  <stop offset="100%" stop-color="#c2185b" />
+                </linearGradient>
+                <linearGradient id="boxLid" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffadc1" />
+                  <stop offset="100%" stop-color="#ec407a" />
+                </linearGradient>
+                <linearGradient id="goldRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fff9c4" />
+                  <stop offset="50%" stop-color="#ffd54f" />
+                  <stop offset="100%" stop-color="#ffb300" />
+                </linearGradient>
+              </defs>
+
+              <!-- Shadow -->
+              <ellipse cx="120" cy="215" rx="78" ry="14" fill="rgba(173,20,87,0.22)" />
+
+              <!-- Inner Golden Light When Open -->
+              <ellipse id="gift-inner-light" cx="120" cy="115" rx="64" ry="26" fill="#fff59d" opacity="0" class="transition-opacity duration-500" />
+
+              <!-- Box Base -->
+              <g>
+                <polygon points="45,110 120,135 120,210 45,182" fill="url(#boxBody)" />
+                <polygon points="120,135 195,110 195,182 120,210" fill="url(#boxSide)" />
+                <polygon points="75,120 92,126 92,200 75,193" fill="url(#goldRibbon)" />
+                <polygon points="148,126 165,120 165,193 148,200" fill="url(#goldRibbon)" />
+              </g>
+
+              <!-- Animated Lid & Ribbon Bow -->
+              <g id="gift-lid-group">
+                <polygon points="35,92 120,65 205,92 120,120" fill="#ffc1d3" />
+                <polygon points="35,92 120,120 120,140 35,112" fill="url(#boxLid)" />
+                <polygon points="120,120 205,92 205,112 120,140" fill="#d81b60" />
+                <polygon points="72,79 90,74 168,102 150,108" fill="url(#goldRibbon)" />
+                <polygon points="150,74 168,79 90,108 72,102" fill="url(#goldRibbon)" />
+                <path d="M120,88 C85,48 58,72 82,92 C98,102 112,92 120,88 Z" fill="url(#goldRibbon)" stroke="#ffa000" stroke-width="1.5" />
+                <path d="M120,88 C155,48 182,72 158,92 C142,102 128,92 120,88 Z" fill="url(#goldRibbon)" stroke="#ffa000" stroke-width="1.5" />
+                <circle cx="120" cy="88" r="10" fill="#ffb300" />
+              </g>
+            </svg>
+          </div>
+
+          <!-- Label Under Box -->
+          <div class="mt-2 inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/95 border border-pink-300 text-pink-700 font-bold text-sm shadow-md group-hover:scale-105 transition-transform">
+            <span>✨</span>
+            <span id="gift-cta-label">Chạm vào hộp quà để mở 🎁</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Revealed Gift Content (Message + 3 Surprise Cards) -->
+      <div
+        id="gift-reveal-panel"
+        class="hidden mt-10 space-y-8 transition-all duration-500"
+      >
+        <!-- Main Revealed Message -->
+        <div class="max-w-2xl mx-auto glass-card rounded-3xl p-6 sm:p-8 shadow-xl border-2 border-pink-300">
+          <p class="text-xs font-bold uppercase tracking-widest text-pink-500 mb-2">
+            ✨ Thông Điệp Dành Tặng Riêng Bạn ✨
+          </p>
+          <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-pink-600 via-rose-500 to-purple-600 bg-clip-text text-transparent leading-snug">
+            "Bạn chính là món quà tuyệt vời của thế giới này! 💝"
+          </h3>
+        </div>
+
+        <!-- 3 Surprise Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          <!-- Surprise Card 1 -->
+          <div class="surprise-card cursor-pointer rounded-3xl p-6 bg-gradient-to-br from-pink-100 via-rose-50 to-white border-2 border-white shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🌸</span>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-pink-100 text-pink-700">Món quà #1</span>
+            </div>
+            <h4 class="text-lg sm:text-xl font-extrabold text-[#4a2538] mb-2">
+              Chúc bạn luôn xinh đẹp và tự tin!
+            </h4>
+            <p class="text-sm text-[#6d3b53] leading-relaxed">
+              Hãy luôn tỏa sáng với nụ cười rạng rỡ và nét đáng yêu độc nhất của riêng bạn nhé!
+            </p>
+          </div>
+
+          <!-- Surprise Card 2 -->
+          <div class="surprise-card cursor-pointer rounded-3xl p-6 bg-gradient-to-br from-emerald-50 via-teal-50/70 to-white border-2 border-white shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🍀</span>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-emerald-100 text-emerald-700">Món quà #2</span>
+            </div>
+            <h4 class="text-lg sm:text-xl font-extrabold text-[#4a2538] mb-2">
+              Chúc bạn học tập thuận lợi, mọi điều như ý!
+            </h4>
+            <p class="text-sm text-[#6d3b53] leading-relaxed">
+              Mọi kỳ thi đều vượt qua nhẹ nhàng, điểm số như mơ và gặt hái thật nhiều thành tích!
+            </p>
+          </div>
+
+          <!-- Surprise Card 3 -->
+          <div class="surprise-card cursor-pointer rounded-3xl p-6 bg-gradient-to-br from-purple-100 via-pink-50 to-white border-2 border-white shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">💖</span>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-purple-100 text-purple-700">Món quà #3</span>
+            </div>
+            <h4 class="text-lg sm:text-xl font-extrabold text-[#4a2538] mb-2">
+              Chúc bạn luôn được yêu thương và hạnh phúc!
+            </h4>
+            <p class="text-sm text-[#6d3b53] leading-relaxed">
+              Mỗi ngày trôi qua đều ngập tràn sự quan tâm, dịu dàng và những niềm vui ngọt ngào!
+            </p>
+          </div>
+        </div>
+
+        <!-- Reopen Gift Button without Refreshing -->
+        <div class="pt-2">
+          <button
+            id="reopen-gift-btn"
+            type="button"
+            class="px-6 py-3 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-sm sm:text-base shadow-lg hover:scale-105 active:scale-95 transition-all inline-flex items-center gap-2"
+          >
+            <span>🎀 Đóng & Mở Lại Hộp Quà Yêu Thương</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 4: BEAUTIFUL WISHES CARDS GRID (8 CARDS WITH 3D TILT)
+  ====================================================================== -->
+  <section id="wishes-section" class="py-16 sm:py-24 px-4 sm:px-6 relative z-20">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12 space-y-3">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-bold uppercase tracking-wider">
+          🌸 Ngàn Lời Chúc Ngọt Ngào
+        </span>
+        <h2 class="font-script text-4xl sm:text-5xl font-bold text-pink-700">
+          Vườn Hoa Lời Chúc 20/10 🌷
+        </h2>
+        <p class="text-sm sm:text-base text-[#6d3b53] max-w-2xl mx-auto">
+          Những lời chúc vừa đáng yêu, vừa hài hước lại đong đầy yêu thương dành tặng các bạn nữ trong lớp. Di chuột để cảm nhận hiệu ứng nghiêng 3D, thả tim hoặc sao chép lời chúc bạn yêu thích nhé!
+        </p>
+      </div>
+
+      <!-- 8 Wishes Cards Container (Populated by Vanilla JS) -->
+      <div id="wishes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 5: PHOTO MEMORY GALLERY ("Thanh Xuân Của Chúng Ta 🌸")
+  ====================================================================== -->
+  <section id="gallery-section" class="py-16 sm:py-24 px-4 sm:px-6 relative z-20 bg-gradient-to-b from-pink-100/60 via-rose-50/70 to-purple-100/50">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div class="text-center md:text-left space-y-2">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/90 text-pink-700 text-xs font-bold uppercase tracking-wider shadow-sm">
+            📸 Album Kỷ Niệm Lớp Mình
+          </span>
+          <h2 class="font-script text-4xl sm:text-5xl font-bold text-pink-700">
+            Thanh Xuân Của Chúng Ta 🌸
+          </h2>
+          <p class="text-sm sm:text-base text-[#6d3b53] max-w-2xl">
+            Nơi lưu giữ những khoảnh khắc trong trẻo, đáng yêu nhất của tập thể lớp. Bạn có thể bấm nút <strong>"Đổi ảnh kỷ niệm"</strong> trên từng thẻ để tải ảnh thật của lớp mình lên ngay trên trình duyệt!
+          </p>
+        </div>
+
+        <!-- Global Hidden File Input for Quick Photo Replacement -->
+        <input id="global-photo-input" type="file" accept="image/*" class="hidden" />
+      </div>
+
+      <!-- 6 Memory Cards Grid (Populated by Vanilla JS) -->
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7"></div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 6: INTERACTIVE WISH GENERATOR ("Nhận Một Lời Chúc May Mắn ✨")
+  ====================================================================== -->
+  <section id="generator-section" class="py-16 sm:py-24 px-4 sm:px-6 relative z-20">
+    <div class="max-w-3xl mx-auto text-center">
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-wider mb-3">
+        🔮 Góc May Mắn 20/10
+      </span>
+      <h2 class="font-script text-4xl sm:text-5xl font-bold text-pink-700 mb-3">
+        Trạm Phát Tín Hiệu Yêu Thương ✨
+      </h2>
+      <p class="text-sm sm:text-base text-[#6d3b53] max-w-xl mx-auto mb-8">
+        Mỗi lần bấm nút bên dưới, vũ trụ 20/10 sẽ chọn ngẫu nhiên một lời chúc may mắn từ bộ sưu tập 22 thông điệp ngọt ngào dành tặng riêng bạn!
+      </p>
+
+      <!-- Glowing Lucky Wish Card -->
+      <div class="relative my-6">
+        <div class="absolute -inset-2 rounded-[32px] bg-gradient-to-r from-pink-400 via-purple-300 to-rose-400 opacity-50 blur-xl pointer-events-none"></div>
+
+        <div
+          id="lucky-wish-card"
+          class="relative glass-card rounded-3xl p-7 sm:p-10 shadow-2xl border-2 border-pink-200 transition-all duration-300"
+        >
+          <div class="flex items-center justify-between mb-4">
+            <span id="lucky-wish-badge" class="px-3.5 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-bold">
+              🌟 Thông điệp may mắn #1/22
+            </span>
+            <span id="lucky-wish-counter" class="text-xs font-bold text-pink-600">
+              Lượt rút: 1 ✨
+            </span>
+          </div>
+
+          <p id="lucky-wish-text" class="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#4a2538] leading-relaxed my-4">
+            "Hôm nay bạn không chỉ là nữ hoàng, mà còn là nữ hoàng được cả vũ trụ ưu ái! 👑💗"
+          </p>
+
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <button
+              id="copy-lucky-wish-btn"
+              type="button"
+              class="px-4 py-2 rounded-full bg-pink-50 hover:bg-pink-100 text-pink-700 text-xs sm:text-sm font-bold inline-flex items-center gap-1.5 border border-pink-200 transition-all"
+            >
+              <span>📋 Sao chép lời chúc này</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Generator Trigger Button -->
+      <button
+        id="generate-wish-btn"
+        type="button"
+        class="mt-4 animate-pulse-glow px-8 py-4 rounded-full bg-gradient-to-r from-pink-500 via-fuchsia-500 to-rose-500 text-white font-bold text-base sm:text-lg shadow-xl hover:scale-105 active:scale-95 transition-all inline-flex items-center gap-2.5 cursor-pointer"
+      >
+        <span>Nhận Một Lời Chúc May Mắn ✨</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       SECTION 7: EMOTIONAL FINAL SECTION & ANIMATED FLOWER GARDEN
+  ====================================================================== -->
+  <footer
+    id="closing-section"
+    class="relative pt-16 sm:pt-24 pb-36 px-4 sm:px-6 overflow-hidden z-20 bg-gradient-to-b from-transparent via-pink-100/80 to-rose-200/90"
+  >
+    <div class="max-w-4xl mx-auto text-center relative z-20 space-y-6">
+      <!-- Large Glowing Happy 20/10 Title -->
+      <div class="inline-block">
+        <span class="font-script text-5xl sm:text-7xl font-bold bg-gradient-to-r from-pink-600 via-rose-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(233,30,99,0.35)]">
+          Happy 20/10
+        </span>
+      </div>
+
+      <!-- Emotional Headline -->
+      <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#4a2538] tracking-tight leading-tight">
+        20/10 VUI VẺ NHÉ, NHỮNG CÔ GÁI TUYỆT VỜI! 💗
+      </h2>
+
+      <!-- Supporting Emotional Message -->
+      <p class="text-base sm:text-lg md:text-xl text-[#6d3b53] max-w-3xl mx-auto leading-relaxed font-medium glass-card p-6 sm:p-8 rounded-3xl shadow-lg">
+        Cảm ơn các bạn vì đã làm cho những ngày tháng thanh xuân trở nên đáng nhớ hơn. Chúc các bạn luôn vui vẻ, bình an, hạnh phúc và tỏa sáng theo cách riêng của mình. Hãy luôn yêu thương bản thân và mỉm cười thật nhiều nhé! 🌷
+      </p>
+
+      <!-- Interactive "Gửi Một Trái Tim ❤️" Button & Live Counter -->
+      <div class="pt-4 flex flex-col items-center gap-3 relative">
+        <div id="floating-hearts-stage" class="relative">
+          <button
+            id="send-heart-btn"
+            type="button"
+            class="animate-pulse-glow px-8 py-4 rounded-full bg-gradient-to-r from-rose-500 via-pink-500 to-red-500 text-white font-bold text-base sm:text-lg shadow-xl hover:scale-110 active:scale-95 transition-all inline-flex items-center gap-2.5 cursor-pointer"
+          >
+            <span>Gửi Một Trái Tim ❤️</span>
+          </button>
+        </div>
+
+        <div class="glass-pill px-5 py-1.5 rounded-full text-xs sm:text-sm font-bold text-pink-800 shadow-sm">
+          💖 Đã có <span id="heart-counter-value" class="text-rose-600 font-extrabold">2.010</span> trái tim yêu thương được gửi đi!
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated SVG Flower Garden at the Bottom -->
+    <div class="absolute bottom-0 left-0 right-0 h-28 sm:h-36 pointer-events-none select-none overflow-hidden" aria-hidden="true">
+      <svg id="footer-garden-svg" viewBox="0 0 1440 180" preserveAspectRatio="none" class="w-full h-full"></svg>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       LIGHTBOX MODAL FOR VIEWING GALLERY PHOTOS LARGER
+  ====================================================================== -->
+  <div
+    id="lightbox-modal"
+    class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div
+      id="lightbox-content"
+      class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border-2 border-pink-200"
+    >
+      <div class="relative h-72 sm:h-96 bg-pink-50" id="lightbox-media-box"></div>
+      <div class="p-6 sm:p-8">
+        <div class="flex items-center justify-between text-xs font-bold text-pink-600 mb-2">
+          <span id="lightbox-date"></span>
+          <span id="lightbox-tag" class="px-3 py-1 rounded-full bg-pink-100"></span>
+        </div>
+        <h3 id="lightbox-title" class="text-2xl font-extrabold text-[#4a2538] mb-2"></h3>
+        <p id="lightbox-caption" class="text-base text-[#6d3b53] leading-relaxed mb-6"></p>
+        <div class="flex flex-wrap items-center justify-end gap-3">
+          <button
+            id="lightbox-change-photo-btn"
+            type="button"
+            class="px-4 py-2 rounded-full bg-pink-100 text-pink-700 font-bold text-sm hover:bg-pink-200 transition-colors"
+          >
+            📸 Đổi ảnh kỷ niệm này
+          </button>
+          <button
+            id="lightbox-close-btn"
+            type="button"
+            class="px-5 py-2 rounded-full bg-pink-500 text-white font-bold text-sm hover:bg-pink-600 transition-colors"
+          >
+            Đóng
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       PURE VANILLA JAVASCRIPT APPLICATION LOGIC
+  ====================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      // -------------------------------------------------------------------
+      // 1. DATA: 8 WISHES CARDS & 22 LUCKY WISHES & 6 GALLERY MEMORIES
+      // -------------------------------------------------------------------
+      const WISHES_CARDS_DATA = [
+        {
+          id: 1,
+          emoji: '🌷',
+          badge: 'Visual Đỉnh Cao',
+          text: 'Chúc bạn xinh đẹp không góc chết, chụp ảnh góc nào cũng slay!',
+          gradient: 'from-pink-100/90 via-rose-50/90 to-white/90',
+          likes: 28,
+          liked: false
+        },
+        {
+          id: 2,
+          emoji: '💸',
+          badge: 'Phú Quý Rực Rỡ',
+          text: 'Chúc ví luôn đầy tiền, tài khoản luôn ting ting!',
+          gradient: 'from-amber-50/90 via-pink-50/90 to-white/90',
+          likes: 35,
+          liked: false
+        },
+        {
+          id: 3,
+          emoji: '📚',
+          badge: 'Học Bá Tỏa Sáng',
+          text: 'Chúc học hành thuận lợi, thi đâu đậu đó!',
+          gradient: 'from-purple-100/90 via-pink-50/90 to-white/90',
+          likes: 31,
+          liked: false
+        },
+        {
+          id: 4,
+          emoji: '💖',
+          badge: 'Ngập Tràn Yêu Thương',
+          text: 'Chúc bạn luôn có người quan tâm, yêu thương và chiều chuộng!',
+          gradient: 'from-rose-100/90 via-pink-50/90 to-white/90',
+          likes: 42,
+          liked: false
+        },
+        {
+          id: 5,
+          emoji: '✨',
+          badge: 'Vạn Sự Như Ý',
+          text: 'Chúc mọi dự định đều thành công, mọi ước mơ đều thành hiện thực!',
+          gradient: 'from-fuchsia-100/90 via-rose-50/90 to-white/90',
+          likes: 29,
+          liked: false
+        },
+        {
+          id: 6,
+          emoji: '🌈',
+          badge: 'Năng Lượng Vui Vẻ',
+          text: 'Chúc ngày nào cũng vui như trúng số, hạnh phúc như được nghỉ học!',
+          gradient: 'from-sky-50/90 via-pink-50/90 to-white/90',
+          likes: 39,
+          liked: false
+        },
+        {
+          id: 7,
+          emoji: '🎁',
+          badge: 'Full Quà 20/10',
+          text: 'Chúc 20/10 nhận quà mỏi tay, nhận lời chúc mỏi mắt!',
+          gradient: 'from-rose-100/90 via-amber-50/90 to-white/90',
+          likes: 33,
+          liked: false
+        },
+        {
+          id: 8,
+          emoji: '🦋',
+          badge: 'Tự Tin Rạng Ngời',
+          text: 'Chúc bạn luôn tự tin tỏa sáng và là phiên bản tuyệt vời nhất của chính mình!',
+          gradient: 'from-violet-100/90 via-pink-50/90 to-white/90',
+          likes: 45,
+          liked: false
+        }
+      ];
+
+      const LUCKY_WISHES_COLLECTION = [
+        'Hôm nay bạn không chỉ là nữ hoàng, mà còn là nữ hoàng được cả vũ trụ ưu ái! 👑💗',
+        'Chúc bạn mỗi sáng thức dậy đều thấy mình xinh đẹp hơn hôm qua và hạnh phúc hơn mong đợi! 🌸✨',
+        'Chúc cô gái tuyệt vời đang đọc dòng này luôn giữ được nụ cười tỏa nắng làm tan chảy mọi muộn phiền! ☀️🌷',
+        '20/10 chúc bạn: Nhan sắc thăng hạng, điểm số chót vót, niềm vui nhân đôi, muộn phiền bằng không! 💯💖',
+        'Mong rằng mọi điều dịu dàng nhất của thế gian này đều sẽ tìm đến và ôm lấy bạn! 🎀🤍',
+        'Chúc bạn luôn mạnh mẽ như hoa hướng dương, kiêu sa như hoa hồng và thuần khiết như cúc họa mi! 🌻🌹',
+        'Chúc bạn đi đến đâu cũng tỏa hương, làm việc gì cũng thuận buồm xuôi gió, ai gặp cũng quý mến! 🍀🌷',
+        'Chúc bạn có một tâm hồn luôn bình yên, một trái tim luôn ấm áp và một tương lai rực rỡ phía trước! ✨🌈',
+        '20/10 này và cả 364 ngày còn lại, chúc bạn luôn được nâng niu như một đóa hoa quý giá nhất! 💐💝',
+        'Chúc bạn học bài một lần là nhớ, làm bài kiểm tra toàn câu tủ, điểm 9 điểm 10 bay về tới tấp! 📚🌟',
+        'Chúc bạn luôn giữ được sự hồn nhiên, đáng yêu và nguồn năng lượng tích cực làm bừng sáng cả lớp mình! 🦋💗',
+        'Chúc bạn ăn mãi không béo, thức khuya không lên mụn, chụp tấm ảnh nào cũng triệu tim! 📸💅',
+        'Gửi ngàn lời chúc ngọt ngào nhất đến bạn: Hãy luôn tin vào bản thân vì bạn thật sự rất xuất sắc! 👑🌸',
+        'Chúc bạn mỗi ngày đi học đều là một ngày vui, có bạn bè tốt đồng hành và kỷ niệm đẹp đầy ắp! 🎒💖',
+        'Mong cho những ước mơ thầm kín nhất của bạn sẽ sớm nở hoa rực rỡ trong năm nay! 🌷🌠',
+        'Chúc bạn có thật nhiều sức khỏe, thật nhiều niềm vui và luôn là niềm tự hào của gia đình, bạn bè! 🏡💞',
+        '20/10 chúc bạn nhận được thật nhiều hoa tươi, trà sữa full topping và những lời yêu thương chân thành! 🧋🎁',
+        'Chúc bạn luôn tự do theo đuổi đam mê, rạng rỡ theo cách riêng và không bao giờ đánh mất nụ cười! 🕊️✨',
+        'Vũ trụ gửi tín hiệu: Sắp có thật nhiều may mắn, điểm cao và tin vui bất ngờ tìm đến bạn đó! 🔮💗',
+        'Chúc bạn dù ở bất cứ đâu cũng luôn tỏa sáng lấp lánh như vì sao đẹp nhất trên bầu trời đêm! ⭐🌷',
+        'Chúc thanh xuân của bạn ngập tràn sắc hồng, tình bạn bền lâu và những tháng năm rực rỡ không quên! 🌸🎶',
+        'Hôm nay là ngày của bạn! Hãy tận hưởng trọn vẹn từng khoảnh khắc ngọt ngào và tự thưởng cho mình thật nhiều niềm vui nhé! 🍰💖'
+      ];
+
+      const GALLERY_MEMORIES_DATA = [
+        {
+          id: 'mem-1',
+          title: 'Nắng Ấm Bên Khung Cửa Lớp Học',
+          date: 'Kỷ Niệm Thanh Xuân',
+          caption: 'Những buổi sáng ngập tràn tiếng cười, ánh nắng dịu dàng chiếu qua khung cửa sổ và những trang vở thơm mùi giấy mới.',
+          tag: 'Trong trẻo 🌸',
+          type: 'window-sunlight',
+          customImage: null
+        },
+        {
+          id: 'mem-2',
+          title: 'Hoa Tươi & Quà Xinh Trên Bàn Học',
+          date: 'Tháng 10 Yêu Thương',
+          caption: 'Khoảnh khắc bất ngờ khi bước vào lớp thấy những bông hoa hồng, thiệp viết tay và những món quà nhỏ xinh trên mặt bàn.',
+          tag: 'Bất ngờ 🎁',
+          type: 'desk-flowers',
+          customImage: null
+        },
+        {
+          id: 'mem-3',
+          title: 'Tan Học Cùng Nhau & Trà Sữa Ngọt Ngào',
+          date: 'Chiều Hẹn Hò Lớp Mình',
+          caption: 'Sau những tiết học căng thẳng là lúc cả nhóm rủ nhau đi ăn vặt, uống trà sữa và kể đủ thứ chuyện trên đời không biết mệt.',
+          tag: 'Gắn kết 🧋',
+          type: 'boba-friends',
+          customImage: null
+        },
+        {
+          id: 'mem-4',
+          title: 'Cùng Nhau Chinh Phục Mọi Kỳ Thi',
+          date: 'Mùa Ôn Tập',
+          caption: 'Những giờ cùng nhau giải bài khó, chia sẻ từng tờ đề cương và cổ vũ nhau vượt qua mọi thử thách học tập.',
+          tag: 'Cố gắng 📚',
+          type: 'study-dreams',
+          customImage: null
+        },
+        {
+          id: 'mem-5',
+          title: 'Sân Trường Mùa Hoa Nở Rộ',
+          date: 'Khung Trời Kỷ Niệm',
+          caption: 'Dưới tán cây xanh mát của sân trường, những bức ảnh chụp vội nhưng lưu giữ trọn vẹn nụ cười rạng rỡ nhất của tuổi học trò.',
+          tag: 'Rạng rỡ 🌷',
+          type: 'schoolyard-blossom',
+          customImage: null
+        },
+        {
+          id: 'mem-6',
+          title: 'Ngày Hội 20/10 Đáng Nhớ Của Lớp',
+          date: '20/10 Tuyệt Vời',
+          caption: 'Bữa tiệc nhỏ ấm cúng với bóng bay, bánh ngọt, âm nhạc và những lời chúc chân thành dành tặng những bông hoa đẹp nhất lớp.',
+          tag: 'Hạnh phúc 💖',
+          type: 'class-party',
+          customImage: null
+        }
+      ];
+
+      // -------------------------------------------------------------------
+      // 2. HELPER: TOAST NOTIFICATION & SAFE CLIPBOARD COPY
+      // -------------------------------------------------------------------
+      let toastTimer = null;
+      function showToast(message) {
+        const banner = document.getElementById('toast-banner');
+        const textEl = document.getElementById('toast-text');
+        if (!banner || !textEl) return;
+        textEl.textContent = message;
+        banner.classList.remove('opacity-0', '-translate-y-4');
+        banner.classList.add('opacity-100', 'translate-y-0');
+
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          banner.classList.remove('opacity-100', 'translate-y-0');
+          banner.classList.add('opacity-0', '-translate-y-4');
+        }, 2600);
+      }
+
+      function copyToClipboard(text) {
+        // Fallback-first approach using document.execCommand('copy') for iframe compatibility
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand('copy');
+          showToast('💖 Đã sao chép lời chúc vào bộ nhớ tạm!');
+        } catch (err) {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(() => {
+              showToast('💖 Đã sao chép lời chúc vào bộ nhớ tạm!');
+            });
+          }
+        }
+        document.body.removeChild(textarea);
+      }
+
+      // -------------------------------------------------------------------
+      // 3. HELPER: CELEBRATION CONFETTI, SPARKLES & HEARTS BURST
+      // -------------------------------------------------------------------
+      function triggerCelebrationBurst(clientX, clientY, count = 26) {
+        const layer = document.getElementById('burst-layer');
+        if (!layer) return;
+
+        const x = clientX || window.innerWidth / 2;
+        const y = clientY || window.innerHeight / 2;
+        const emojis = ['💖', '🌷', '🌸', '✨', '💝', '🦋', '🌹', '🎀', '💗'];
+        const colors = ['#ff6b9d', '#ff8da1', '#ce93d8', '#ffd54f', '#f48fb1', '#e91e63'];
+
+        for (let i = 0; i < count; i++) {
+          const el = document.createElement('div');
+          const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.5;
+          const dist = 65 + Math.random() * 185;
+          const tx = Math.cos(angle) * dist;
+          const ty = Math.sin(angle) * dist - 50;
+          const rot = Math.round(Math.random() * 360);
+
+          el.style.position = 'absolute';
+          el.style.left = x + 'px';
+          el.style.top = y + 'px';
+          el.style.setProperty('--tx', tx + 'px');
+          el.style.setProperty('--ty', ty + 'px');
+          el.style.setProperty('--rot', rot + 'deg');
+          el.style.animation = 'burstFly 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards';
+
+          if (i % 2 === 0) {
+            el.textContent = emojis[i % emojis.length];
+            el.className = 'text-xl sm:text-2xl select-none';
+          } else {
+            el.className = 'w-3 h-3 rounded-full shadow-sm';
+            el.style.backgroundColor = colors[i % colors.length];
+          }
+
+          layer.appendChild(el);
+          setTimeout(() => {
+            if (el.parentNode) el.parentNode.removeChild(el);
+          }, 1350);
+        }
+      }
+
+      // -------------------------------------------------------------------
+      // 4. HTML5 CANVAS BACKGROUND PARTICLE SYSTEM
+      //    (Falling Rose Petals, Floating Hearts, Twinkling Stars, Butterflies)
+      // -------------------------------------------------------------------
+      const canvas = document.getElementById('ambient-canvas');
+      const ctx = canvas ? canvas.getContext('2d') : null;
+      let particlesEnabled = true;
+
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        particlesEnabled = false;
+      }
+
+      const particles = [];
+      const PARTICLE_COUNT = 34;
+
+      function resizeCanvas() {
+        if (!canvas) return;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      function createParticle(randomY = false) {
+        const w = canvas ? canvas.width : window.innerWidth;
+        const h = canvas ? canvas.height : window.innerHeight;
+        const types = ['petal', 'petal', 'heart', 'star', 'butterfly'];
+        const type = types[Math.floor(Math.random() * types.length)];
+        return {
+          x: Math.random() * w,
+          y: randomY ? Math.random() * h : -30,
+          size: type === 'star' ? 3 + Math.random() * 4 : 7 + Math.random() * 7,
+          speedY: type === 'star' ? 0.25 + Math.random() * 0.4 : 0.7 + Math.random() * 1.25,
+          speedX: (Math.random() - 0.5) * 0.8,
+          angle: Math.random() * Math.PI * 2,
+          spin: (Math.random() - 0.5) * 0.025,
+          type: type,
+          alpha: 0.45 + Math.random() * 0.4,
+          color:
+            type === 'petal'
+              ? ['#ff8da1', '#f48fb1', '#f8bbd0', '#ce93d8'][Math.floor(Math.random() * 4)]
+              : '#ff6b9d'
+        };
+      }
+
+      function initParticles() {
+        resizeCanvas();
+        particles.length = 0;
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+          particles.push(createParticle(true));
+        }
+      }
+
+      function drawParticles() {
+        if (!ctx || !canvas) return;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        if (particlesEnabled) {
+          for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            p.y += p.speedY;
+            p.x += p.speedX + Math.sin(p.angle) * 0.45;
+            p.angle += p.spin;
+
+            if (p.y > canvas.height + 30) {
+              particles[i] = createParticle(false);
+            }
+            if (p.x > canvas.width + 30) p.x = -20;
+            if (p.x < -30) p.x = canvas.width + 20;
+
+            ctx.save();
+            ctx.translate(p.x, p.y);
+            ctx.rotate(p.angle);
+            ctx.globalAlpha = p.alpha;
+
+            if (p.type === 'petal') {
+              ctx.fillStyle = p.color;
+              ctx.beginPath();
+              ctx.ellipse(0, 0, p.size, p.size * 0.6, 0, 0, Math.PI * 2);
+              ctx.fill();
+            } else if (p.type === 'heart') {
+              ctx.fillStyle = '#ff6b9d';
+              const s = p.size * 0.65;
+              ctx.beginPath();
+              ctx.moveTo(0, s * 0.4);
+              ctx.bezierCurveTo(-s, -s * 0.4, -s * 0.5, -s * 1.2, 0, -s * 0.5);
+              ctx.bezierCurveTo(s * 0.5, -s * 1.2, s, -s * 0.4, 0, s * 0.4);
+              ctx.fill();
+            } else if (p.type === 'star') {
+              ctx.fillStyle = '#ffd54f';
+              const twinkle = 0.5 + Math.abs(Math.sin(p.angle * 3)) * 0.5;
+              ctx.globalAlpha = p.alpha * twinkle;
+              ctx.beginPath();
+              ctx.arc(0, 0, p.size * 0.55, 0, Math.PI * 2);
+              ctx.fill();
+            } else if (p.type === 'butterfly') {
+              ctx.fillStyle = '#ce93d8';
+              const wing = Math.abs(Math.sin(p.angle * 5)) * 0.5 + 0.5;
+              ctx.scale(wing, 1);
+              ctx.beginPath();
+              ctx.arc(-p.size * 0.45, 0, p.size * 0.45, 0, Math.PI * 2);
+              ctx.arc(p.size * 0.45, 0, p.size * 0.45, 0, Math.PI * 2);
+              ctx.fill();
+            }
+
+            ctx.restore();
+          }
+        }
+        requestAnimationFrame(drawParticles);
+      }
+
+      window.addEventListener('resize', resizeCanvas);
+
+      const toggleParticlesBtn = document.getElementById('toggle-particles-btn');
+      const particlesStatusLabel = document.getElementById('particles-status-label');
+      if (toggleParticlesBtn) {
+        toggleParticlesBtn.addEventListener('click', () => {
+          particlesEnabled = !particlesEnabled;
+          if (particlesStatusLabel) {
+            particlesStatusLabel.textContent = particlesEnabled ? 'Hoa rơi: Bật' : 'Hoa rơi: Tắt';
+          }
+        });
+      }
+
+      // -------------------------------------------------------------------
+      // 5. WEB AUDIO API MUSIC BOX / CELESTA SYNTHESIZER
+      // -------------------------------------------------------------------
+      const MELODIES = [
+        {
+          name: 'Hộp Nhạc 20/10 Ngọt Ngào',
+          tempo: 350,
+          notes: [
+            523.25, 659.25, 783.99, 1046.5, 880.0, 783.99, 659.25, 587.33,
+            698.46, 880.0, 783.99, 659.25, 587.33, 659.25, 783.99, 523.25,
+            587.33, 698.46, 880.0, 1046.5, 987.77, 783.99, 659.25, 783.99,
+            698.46, 659.25, 587.33, 523.25, 659.25, 783.99, 1046.5, 1046.5
+          ]
+        },
+        {
+          name: 'Khúc Ca Thanh Xuân Rạng Rỡ',
+          tempo: 310,
+          notes: [
+            659.25, 783.99, 880.0, 783.99, 1046.5, 987.77, 880.0, 783.99,
+            698.46, 659.25, 587.33, 659.25, 783.99, 659.25, 587.33, 523.25,
+            659.25, 783.99, 880.0, 1046.5, 1174.66, 1046.5, 880.0, 783.99,
+            698.46, 783.99, 880.0, 987.77, 1046.5, 783.99, 523.25, 523.25
+          ]
+        }
+      ];
+
+      let audioCtx = null;
+      let isPlayingMusic = false;
+      let isMuted = false;
+      let currentMelodyIdx = 0;
+      let noteCursor = 0;
+      let musicInterval = null;
+
+      function playChimeNote(freq) {
+        if (isMuted) return;
+        try {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (!AudioContextClass) return;
+          if (!audioCtx) audioCtx = new AudioContextClass();
+          if (audioCtx.state === 'suspended') audioCtx.resume();
+
+          const now = audioCtx.currentTime;
+          const osc1 = audioCtx.createOscillator();
+          const osc2 = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+
+          osc1.type = 'sine';
+          osc2.type = 'triangle';
+          osc1.frequency.setValueAtTime(freq, now);
+          osc2.frequency.setValueAtTime(freq * 2, now);
+
+          gain.gain.setValueAtTime(0.001, now);
+          gain.gain.exponentialRampToValueAtTime(0.08, now + 0.03);
+          gain.gain.exponentialRampToValueAtTime(0.0008, now + 1.15);
+
+          osc1.connect(gain);
+          osc2.connect(gain);
+          gain.connect(audioCtx.destination);
+
+          osc1.start(now);
+          osc2.start(now);
+          osc1.stop(now + 1.2);
+          osc2.stop(now + 1.2);
+        } catch (e) {
+          // Ignore if blocked
+        }
+      }
+
+      function syncMusicUI() {
+        const playSvg = document.getElementById('play-svg');
+        const pauseSvg = document.getElementById('pause-svg');
+        const eqContainer = document.getElementById('eq-container');
+        const navLabel = document.getElementById('nav-music-label');
+        const muteIcon = document.getElementById('mute-icon');
+        const titleDisplay = document.getElementById('music-title-display');
+
+        if (playSvg && pauseSvg) {
+          playSvg.classList.toggle('hidden', isPlayingMusic);
+          pauseSvg.classList.toggle('hidden', !isPlayingMusic);
+        }
+        if (eqContainer) {
+          eqContainer.classList.toggle('music-playing', isPlayingMusic && !isMuted);
+        }
+        if (navLabel) {
+          navLabel.textContent = isPlayingMusic ? 'Đang phát nhạc' : 'Bật Nhạc';
+        }
+        if (muteIcon) {
+          muteIcon.textContent = isMuted ? '🔇' : '🔊';
+        }
+        if (titleDisplay) {
+          titleDisplay.textContent = MELODIES[currentMelodyIdx].name;
+        }
+      }
+
+      function startMusicLoop() {
+        if (musicInterval) clearInterval(musicInterval);
+        const melody = MELODIES[currentMelodyIdx];
+        musicInterval = setInterval(() => {
+          if (!isPlayingMusic) return;
+          const freq = melody.notes[noteCursor % melody.notes.length];
+          playChimeNote(freq);
+          noteCursor++;
+        }, melody.tempo);
+      }
+
+      function toggleMusicPlayback() {
+        isPlayingMusic = !isPlayingMusic;
+        if (isPlayingMusic) {
+          startMusicLoop();
+          showToast('🎶 Đang phát giai điệu: ' + MELODIES[currentMelodyIdx].name);
+        } else if (musicInterval) {
+          clearInterval(musicInterval);
+        }
+        syncMusicUI();
+      }
+
+      document.getElementById('floating-play-btn')?.addEventListener('click', toggleMusicPlayback);
+      document.getElementById('nav-music-btn')?.addEventListener('click', toggleMusicPlayback);
+
+      document.getElementById('floating-mute-btn')?.addEventListener('click', () => {
+        isMuted = !isMuted;
+        syncMusicUI();
+      });
+
+      document.getElementById('switch-melody-btn')?.addEventListener('click', () => {
+        currentMelodyIdx = (currentMelodyIdx + 1) % MELODIES.length;
+        noteCursor = 0;
+        if (!isPlayingMusic) isPlayingMusic = true;
+        startMusicLoop();
+        syncMusicUI();
+        showToast('🎵 Đã chuyển sang: ' + MELODIES[currentMelodyIdx].name);
+      });
+
+      // -------------------------------------------------------------------
+      // 6. HERO BOUQUET INTERACTIVITY
+      // -------------------------------------------------------------------
+      let bouquetTooltipTimer = null;
+      document.querySelectorAll('.bouquet-flower').forEach((flowerEl) => {
+        flowerEl.addEventListener('click', (e) => {
+          const msg = flowerEl.getAttribute('data-flower') || 'Chúc mừng 20/10 🌸';
+          const tooltip = document.getElementById('bouquet-tooltip');
+          if (tooltip) {
+            tooltip.textContent = '✨ ' + msg;
+            tooltip.classList.remove('opacity-0', '-translate-y-2');
+            tooltip.classList.add('opacity-100', 'translate-y-0');
+            if (bouquetTooltipTimer) clearTimeout(bouquetTooltipTimer);
+            bouquetTooltipTimer = setTimeout(() => {
+              tooltip.classList.remove('opacity-100', 'translate-y-0');
+              tooltip.classList.add('opacity-0', '-translate-y-2');
+            }, 3000);
+          }
+          triggerCelebrationBurst(e.clientX, e.clientY, 16);
+          playChimeNote(880);
+        });
+      });
+
+      // -------------------------------------------------------------------
+      // 7. PERSONALIZED LETTER LINE-BY-LINE ANIMATION
+      // -------------------------------------------------------------------
+      let letterTimeouts = [];
+
+      function clearLetterTimeouts() {
+        letterTimeouts.forEach((t) => clearTimeout(t));
+        letterTimeouts = [];
+      }
+
+      function playLetterRevealAnimation() {
+        clearLetterTimeouts();
+        const env = document.getElementById('envelope-container');
+        if (env) env.classList.add('envelope-open');
+
+        for (let i = 0; i <= 4; i++) {
+          const line = document.getElementById('letter-line-' + i);
+          if (line) line.classList.remove('visible');
+        }
+
+        for (let i = 0; i <= 4; i++) {
+          const t = setTimeout(() => {
+            const line = document.getElementById('letter-line-' + i);
+            if (line) line.classList.add('visible');
+          }, i * 750 + 150);
+          letterTimeouts.push(t);
+        }
+      }
+
+      function showFullLetterImmediately() {
+        clearLetterTimeouts();
+        const env = document.getElementById('envelope-container');
+        if (env) env.classList.add('envelope-open');
+        for (let i = 0; i <= 4; i++) {
+          const line = document.getElementById('letter-line-' + i);
+          if (line) line.classList.add('visible');
+        }
+      }
+
+      document.getElementById('toggle-envelope-btn')?.addEventListener('click', (e) => {
+        playLetterRevealAnimation();
+        triggerCelebrationBurst(e.clientX, e.clientY, 14);
+      });
+
+      document.getElementById('envelope-header-bar')?.addEventListener('click', () => {
+        playLetterRevealAnimation();
+      });
+
+      document.getElementById('reveal-full-letter-btn')?.addEventListener('click', () => {
+        showFullLetterImmediately();
+      });
+
+      // Start initial line-by-line letter animation on load
+      playLetterRevealAnimation();
+
+      // -------------------------------------------------------------------
+      // 8. INTERACTIVE 3D GIFT BOX LOGIC
+      // -------------------------------------------------------------------
+      let isGiftOpen = false;
+      const giftStage = document.getElementById('gift-box-stage');
+      const giftRevealPanel = document.getElementById('gift-reveal-panel');
+      const giftCtaLabel = document.getElementById('gift-cta-label');
+      const giftInnerLight = document.getElementById('gift-inner-light');
+      const giftSubtitle = document.getElementById('gift-subtitle-text');
+
+      function setGiftBoxState(open, clientX, clientY) {
+        isGiftOpen = open;
+        if (giftStage) {
+          giftStage.classList.toggle('gift-open', isGiftOpen);
+        }
+        if (giftRevealPanel) {
+          giftRevealPanel.classList.toggle('hidden', !isGiftOpen);
+        }
+        if (giftInnerLight) {
+          giftInnerLight.setAttribute('opacity', isGiftOpen ? '0.88' : '0');
+        }
+        if (giftCtaLabel) {
+          giftCtaLabel.textContent = isGiftOpen
+            ? 'Chạm để đóng hộp quà 🎀'
+            : 'Chạm vào hộp quà để mở 🎁';
+        }
+        if (giftSubtitle) {
+          giftSubtitle.textContent = isGiftOpen
+            ? 'Món quà đã mở ra cùng ngàn hoa và lời chúc tốt đẹp nhất dành cho bạn!'
+            : 'Hãy chạm vào hộp quà 3D lung linh bên dưới để mở nắp hộp và đón nhận điều bất ngờ nhé!';
+        }
+
+        if (isGiftOpen) {
+          triggerCelebrationBurst(clientX, clientY, 36);
+          playChimeNote(783.99);
+          setTimeout(() => playChimeNote(1046.5), 140);
+        }
+      }
+
+      document.getElementById('gift-box-trigger')?.addEventListener('click', (e) => {
+        setGiftBoxState(!isGiftOpen, e.clientX, e.clientY);
+      });
+
+      document.getElementById('reopen-gift-btn')?.addEventListener('click', (e) => {
+        setGiftBoxState(false);
+        setTimeout(() => {
+          setGiftBoxState(true, e.clientX, e.clientY);
+        }, 350);
+      });
+
+      document.getElementById('hero-open-gift-btn')?.addEventListener('click', (e) => {
+        triggerCelebrationBurst(e.clientX, e.clientY, 24);
+        const giftSec = document.getElementById('gift-section');
+        if (giftSec) {
+          giftSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        setTimeout(() => {
+          setGiftBoxState(true, window.innerWidth / 2, window.innerHeight / 2);
+        }, 650);
+      });
+
+      document.querySelectorAll('.surprise-card').forEach((card) => {
+        card.addEventListener('click', (e) => {
+          triggerCelebrationBurst(e.clientX, e.clientY, 16);
+          playChimeNote(987.77);
+        });
+      });
+
+      // -------------------------------------------------------------------
+      // 9. RENDER 8 WISHES CARDS WITH 3D TILT HOVER, LIKE & COPY
+      // -------------------------------------------------------------------
+      const wishesGrid = document.getElementById('wishes-grid');
+
+      function renderWishesCards() {
+        if (!wishesGrid) return;
+        wishesGrid.innerHTML = '';
+
+        WISHES_CARDS_DATA.forEach((item) => {
+          const card = document.createElement('div');
+          card.className = `wish-tilt-card rounded-3xl p-6 bg-gradient-to-br ${item.gradient} backdrop-blur-md border border-pink-200/80 shadow-[0_12px_30px_rgba(216,96,140,0.1)] hover:shadow-[0_20px_40px_rgba(216,96,140,0.22)] flex flex-col justify-between relative overflow-hidden`;
+
+          card.innerHTML = `
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="w-12 h-12 rounded-2xl bg-white shadow-sm border border-pink-100 flex items-center justify-center text-2xl">
+                  ${item.emoji}
+                </span>
+                <span class="text-xs font-bold px-3 py-1 rounded-full bg-white/85 text-pink-700 border border-pink-200/60">
+                  ${item.badge}
+                </span>
+              </div>
+              <p class="text-base sm:text-lg font-extrabold text-[#4a2538] leading-relaxed mb-6">
+                ${item.text}
+              </p>
+            </div>
+            <div class="pt-3 border-t border-pink-200/50 flex items-center justify-between">
+              <button
+                type="button"
+                data-like-id="${item.id}"
+                class="like-wish-btn px-3.5 py-1.5 rounded-full text-xs font-bold flex items-center gap-1.5 transition-all ${
+                  item.liked
+                    ? 'bg-pink-500 text-white shadow-sm'
+                    : 'bg-white/85 text-pink-700 hover:bg-pink-100'
+                }"
+              >
+                <span>${item.liked ? '❤️' : '💗'}</span>
+                <span class="like-count">${item.likes}</span>
+              </button>
+              <button
+                type="button"
+                data-copy-text="${item.emoji} ${item.text}"
+                class="copy-wish-btn px-3.5 py-1.5 rounded-full bg-white/85 hover:bg-pink-100 text-pink-700 text-xs font-bold flex items-center gap-1 transition-colors"
+              >
+                <span>📋 Sao chép</span>
+              </button>
+            </div>
+          `;
+
+          // 3D Tilt Hover Effect
+          card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const rotateY = ((x / rect.width) - 0.5) * 10;
+            const rotateX = ((0.5 - (y / rect.height))) * 10;
+            card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+          });
+
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+          });
+
+          wishesGrid.appendChild(card);
+        });
+
+        // Attach Like & Copy listeners
+        wishesGrid.querySelectorAll('.like-wish-btn').forEach((btn) => {
+          btn.addEventListener('click', (e) => {
+            const id = parseInt(btn.getAttribute('data-like-id'), 10);
+            const target = WISHES_CARDS_DATA.find((w) => w.id === id);
+            if (!target) return;
+            target.liked = !target.liked;
+            target.likes += target.liked ? 1 : -1;
+            triggerCelebrationBurst(e.clientX, e.clientY, 12);
+            playChimeNote(880);
+            renderWishesCards();
+          });
+        });
+
+        wishesGrid.querySelectorAll('.copy-wish-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const text = btn.getAttribute('data-copy-text') || '';
+            copyToClipboard(text);
+          });
+        });
+      }
+
+      renderWishesCards();
+
+      // -------------------------------------------------------------------
+      // 10. PHOTO MEMORY GALLERY ("Thanh Xuân Của Chúng Ta 🌸") + FILEREADER
+      // -------------------------------------------------------------------
+      function getMemoryIllustrationSVG(type) {
+        if (type === 'window-sunlight') {
+          return `
+            <svg viewBox="0 0 400 260" class="w-full h-full object-cover">
+              <rect width="400" height="260" fill="#fce4ec" />
+              <polygon points="80,0 240,0 380,260 150,260" fill="#ffffff" opacity="0.45" />
+              <rect x="65" y="20" width="160" height="170" rx="12" fill="#e1f5fe" stroke="#f8bbd0" stroke-width="6" />
+              <line x1="145" y1="20" x2="145" y2="190" stroke="#f8bbd0" stroke-width="5" />
+              <line x1="65" y1="105" x2="225" y2="105" stroke="#f8bbd0" stroke-width="5" />
+              <circle cx="115" cy="70" r="20" fill="#ffffff" opacity="0.9" />
+              <circle cx="185" cy="145" r="25" fill="#f48fb1" opacity="0.7" />
+              <rect x="0" y="205" width="400" height="55" fill="#f5d6c6" />
+              <rect x="305" y="158" width="28" height="48" rx="10" fill="#ce93d8" />
+              <circle cx="312" cy="145" r="12" fill="#ff8da1" />
+              <circle cx="328" cy="148" r="11" fill="#f48fb1" />
+            </svg>`;
+        }
+        if (type === 'desk-flowers') {
+          return `
+            <svg viewBox="0 0 400 260" class="w-full h-full object-cover">
+              <rect width="400" height="260" fill="#fff0f5" />
+              <circle cx="330" cy="55" r="65" fill="#fce4ec" />
+              <rect x="30" y="155" width="340" height="85" rx="16" fill="#fffdf9" stroke="#f8bbd0" stroke-width="3" />
+              <rect x="80" y="105" width="75" height="65" rx="8" fill="#ff8da1" />
+              <rect x="75" y="92" width="85" height="18" rx="5" fill="#ec407a" />
+              <rect x="112" y="92" width="12" height="78" fill="#fff5f7" />
+              <circle cx="305" cy="110" r="18" fill="#ec407a" />
+              <circle cx="332" cy="122" r="16" fill="#ff8da1" />
+              <circle cx="285" cy="128" r="15" fill="#ce93d8" />
+            </svg>`;
+        }
+        if (type === 'boba-friends') {
+          return `
+            <svg viewBox="0 0 400 260" class="w-full h-full object-cover">
+              <rect width="400" height="260" fill="#fdf6f9" />
+              <circle cx="200" cy="130" r="100" fill="#fce4ec" opacity="0.7" />
+              <g transform="translate(115, 65) rotate(-10)">
+                <path d="M10,35 L65,35 L56,125 Q37,132 19,125 Z" fill="#ffe0b2" stroke="#f48fb1" stroke-width="3" />
+                <rect x="32" y="0" width="9" height="45" rx="4" fill="#ff8da1" />
+                <circle cx="28" cy="110" r="5" fill="#5d4037" />
+                <circle cx="44" cy="108" r="5" fill="#5d4037" />
+              </g>
+              <g transform="translate(215, 55) rotate(12)">
+                <path d="M10,35 L65,35 L56,125 Q37,132 19,125 Z" fill="#f8bbd0" stroke="#ce93d8" stroke-width="3" />
+                <rect x="32" y="0" width="9" height="45" rx="4" fill="#ab47bc" />
+                <circle cx="28" cy="110" r="5" fill="#4a2538" />
+                <circle cx="44" cy="108" r="5" fill="#4a2538" />
+              </g>
+            </svg>`;
+        }
+        if (type === 'study-dreams') {
+          return `
+            <svg viewBox="0 0 400 260" class="w-full h-full object-cover">
+              <rect width="400" height="260" fill="#f8f0fb" />
+              <rect x="110" y="170" width="180" height="26" rx="6" fill="#f48fb1" />
+              <rect x="120" y="144" width="165" height="26" rx="6" fill="#ce93d8" />
+              <rect x="130" y="118" width="145" height="26" rx="6" fill="#ffca28" />
+              <polygon points="200,52 212,78 240,82 220,100 225,126 200,112 175,126 180,100 160,82 188,78" fill="#ffd54f" stroke="#f57f17" stroke-width="2" />
+              <circle cx="295" cy="90" r="28" fill="#ffffff" stroke="#ff8da1" stroke-width="3" />
+              <text x="295" y="97" text-anchor="middle" fill="#e91e63" font-size="18" font-weight="bold">10+</text>
+            </svg>`;
+        }
+        if (type === 'schoolyard-blossom') {
+          return `
+            <svg viewBox="0 0 400 260" class="w-full h-full object-cover">
+              <rect width="400" height="260" fill="#fff8f8" />
+              <path d="M0,190 Q120,150 240,185 T400,175 L400,260 L0,260 Z" fill="#f8bbd0" opacity="0.5" />
+              <path d="M200,220 L200,125 M200,155 L165,120 M200,145 L238,115" stroke="#8d6e63" stroke-width="10" stroke-linecap="round" />
+              <circle cx="200" cy="95" r="52" fill="#f8bbd0" />
+              <circle cx="155" cy="110" r="40" fill="#fce4ec" />
+              <circle cx="245" cy="110" r="40" fill="#f48fb1" opacity="0.85" />
+            </svg>`;
+        }
+        return `
+          <svg viewBox="0 0 400 260" class="w-full h-full object-cover">
+            <rect width="400" height="260" fill="#fce4ec" />
+            <circle cx="95" cy="135" r="26" fill="#ff8da1" />
+            <circle cx="305" cy="130" r="26" fill="#ce93d8" />
+            <rect x="145" y="155" width="110" height="55" rx="10" fill="#fffdf9" stroke="#f48fb1" stroke-width="3" />
+            <text x="200" y="140" text-anchor="middle" fill="#c2185b" font-size="24" font-weight="bold">20/10</text>
+          </svg>`;
+      }
+
+      const galleryGrid = document.getElementById('gallery-grid');
+      const globalPhotoInput = document.getElementById('global-photo-input');
+      let activePhotoMemoryId = null;
+
+      function renderGallery() {
+        if (!galleryGrid) return;
+        galleryGrid.innerHTML = '';
+
+        GALLERY_MEMORIES_DATA.forEach((item) => {
+          const card = document.createElement('div');
+          card.className = 'group glass-card rounded-3xl overflow-hidden transition-all duration-500 flex flex-col hover:-translate-y-1.5';
+
+          const mediaMarkup = item.customImage
+            ? `<img src="${item.customImage}" alt="${item.title}" class="w-full h-full object-cover" />`
+            : getMemoryIllustrationSVG(item.type);
+
+          card.innerHTML = `
+            <div class="relative h-56 w-full overflow-hidden bg-pink-50 cursor-pointer view-memory-trigger" data-id="${item.id}">
+              <div class="w-full h-full transform group-hover:scale-110 transition-transform duration-700">
+                ${mediaMarkup}
+              </div>
+              <div class="absolute top-3 left-3 glass-pill px-3 py-1 rounded-full text-xs font-bold text-pink-700 shadow-sm">
+                ${item.tag}
+              </div>
+              <button
+                type="button"
+                data-change-id="${item.id}"
+                class="change-photo-btn absolute top-3 right-3 glass-pill px-3 py-1.5 rounded-full text-xs font-bold text-pink-800 hover:bg-white transition-all flex items-center gap-1 shadow-sm"
+                title="Tải ảnh lớp mình lên thay thế"
+              >
+                <span>📸 Đổi ảnh kỷ niệm</span>
+              </button>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="text-xs font-bold text-pink-500 mb-1">${item.date}</div>
+                <h3 class="text-lg font-extrabold text-[#4a2538] mb-2 group-hover:text-pink-600 transition-colors">
+                  ${item.title}
+                </h3>
+                <p class="text-sm text-[#6d3b53] leading-relaxed">${item.caption}</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-pink-100 flex items-center justify-between text-xs font-bold text-pink-700">
+                <button type="button" data-id="${item.id}" class="view-memory-trigger hover:text-pink-500">
+                  🔍 Phóng to kỷ niệm
+                </button>
+                <span>🌸 Thanh xuân lớp mình</span>
+              </div>
+            </div>
+          `;
+
+          galleryGrid.appendChild(card);
+        });
+
+        // Change Photo Buttons
+        galleryGrid.querySelectorAll('.change-photo-btn').forEach((btn) => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            activePhotoMemoryId = btn.getAttribute('data-change-id');
+            if (globalPhotoInput) {
+              globalPhotoInput.value = '';
+              globalPhotoInput.click();
+            }
+          });
+        });
+
+        // View Lightbox Triggers
+        galleryGrid.querySelectorAll('.view-memory-trigger').forEach((el) => {
+          el.addEventListener('click', () => {
+            const id = el.getAttribute('data-id');
+            openLightbox(id);
+          });
+        });
+      }
+
+      if (globalPhotoInput) {
+        globalPhotoInput.addEventListener('change', (e) => {
+          const file = e.target.files && e.target.files[0];
+          if (!file || !activePhotoMemoryId) return;
+          const reader = new FileReader();
+          reader.onload = function (ev) {
+            const target = GALLERY_MEMORIES_DATA.find((m) => m.id === activePhotoMemoryId);
+            if (target && ev.target && typeof ev.target.result === 'string') {
+              target.customImage = ev.target.result;
+              renderGallery();
+              showToast('📸 Đã cập nhật ảnh kỷ niệm lớp mình thành công!');
+            }
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      // Lightbox Modal Logic
+      const lightboxModal = document.getElementById('lightbox-modal');
+      let currentLightboxId = null;
+
+      function openLightbox(id) {
+        const item = GALLERY_MEMORIES_DATA.find((m) => m.id === id);
+        if (!item || !lightboxModal) return;
+        currentLightboxId = id;
+
+        const mediaBox = document.getElementById('lightbox-media-box');
+        if (mediaBox) {
+          mediaBox.innerHTML = item.customImage
+            ? `<img src="${item.customImage}" alt="${item.title}" class="w-full h-full object-cover" />`
+            : getMemoryIllustrationSVG(item.type);
+        }
+        document.getElementById('lightbox-date').textContent = item.date;
+        document.getElementById('lightbox-tag').textContent = item.tag;
+        document.getElementById('lightbox-title').textContent = item.title;
+        document.getElementById('lightbox-caption').textContent = item.caption;
+
+        lightboxModal.classList.remove('hidden');
+        lightboxModal.classList.add('flex');
+      }
+
+      function closeLightbox() {
+        if (!lightboxModal) return;
+        lightboxModal.classList.add('hidden');
+        lightboxModal.classList.remove('flex');
+      }
+
+      document.getElementById('lightbox-close-btn')?.addEventListener('click', closeLightbox);
+      lightboxModal?.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) closeLightbox();
+      });
+
+      document.getElementById('lightbox-change-photo-btn')?.addEventListener('click', () => {
+        if (!currentLightboxId) return;
+        activePhotoMemoryId = currentLightboxId;
+        closeLightbox();
+        if (globalPhotoInput) {
+          globalPhotoInput.value = '';
+          globalPhotoInput.click();
+        }
+      });
+
+      renderGallery();
+
+      // -------------------------------------------------------------------
+      // 11. INTERACTIVE WISH GENERATOR (22 UNIQUE WISHES, NON-REPEATING)
+      // -------------------------------------------------------------------
+      let currentLuckyIdx = 0;
+      let luckyDrawCount = 1;
+
+      const luckyCard = document.getElementById('lucky-wish-card');
+      const luckyBadge = document.getElementById('lucky-wish-badge');
+      const luckyCounter = document.getElementById('lucky-wish-counter');
+      const luckyText = document.getElementById('lucky-wish-text');
+
+      document.getElementById('generate-wish-btn')?.addEventListener('click', (e) => {
+        triggerCelebrationBurst(e.clientX, e.clientY, 24);
+        playChimeNote(880);
+
+        if (luckyCard) {
+          luckyCard.classList.add('scale-95', 'opacity-60');
+        }
+
+        setTimeout(() => {
+          let nextIdx = Math.floor(Math.random() * LUCKY_WISHES_COLLECTION.length);
+          if (nextIdx === currentLuckyIdx) {
+            nextIdx = (currentLuckyIdx + 1) % LUCKY_WISHES_COLLECTION.length;
+          }
+          currentLuckyIdx = nextIdx;
+          luckyDrawCount++;
+
+          if (luckyBadge) {
+            luckyBadge.textContent = `🌟 Thông điệp may mắn #${currentLuckyIdx + 1}/${LUCKY_WISHES_COLLECTION.length}`;
+          }
+          if (luckyCounter) {
+            luckyCounter.textContent = `Lượt rút: ${luckyDrawCount} ✨`;
+          }
+          if (luckyText) {
+            luckyText.textContent = `"${LUCKY_WISHES_COLLECTION[currentLuckyIdx]}"`;
+          }
+          if (luckyCard) {
+            luckyCard.classList.remove('scale-95', 'opacity-60');
+          }
+        }, 220);
+      });
+
+      document.getElementById('copy-lucky-wish-btn')?.addEventListener('click', () => {
+        copyToClipboard(LUCKY_WISHES_COLLECTION[currentLuckyIdx]);
+      });
+
+      // -------------------------------------------------------------------
+      // 12. FINAL CLOSING HEART BUTTON & ANIMATED FLOWER GARDEN
+      // -------------------------------------------------------------------
+      let totalHeartsCount = 2010;
+      const heartCounterEl = document.getElementById('heart-counter-value');
+      const floatingHeartsStage = document.getElementById('floating-hearts-stage');
+
+      document.getElementById('send-heart-btn')?.addEventListener('click', (e) => {
+        totalHeartsCount++;
+        if (heartCounterEl) {
+          heartCounterEl.textContent = totalHeartsCount.toLocaleString('vi-VN');
+        }
+
+        triggerCelebrationBurst(e.clientX, e.clientY, 28);
+        playChimeNote(1046.5);
+
+        // Launch Floating Hearts Shower from the button
+        if (floatingHeartsStage) {
+          const heartEmojis = ['❤️', '💖', '💗', '💝', '🌷'];
+          for (let i = 0; i < 7; i++) {
+            const span = document.createElement('span');
+            span.textContent = heartEmojis[i % heartEmojis.length];
+            span.className = 'absolute left-1/2 top-0 text-2xl pointer-events-none select-none';
+            const offsetX = (Math.random() - 0.5) * 140;
+            const rot = Math.round((Math.random() - 0.5) * 50);
+            span.style.marginLeft = offsetX + 'px';
+            span.style.setProperty('--rot', rot + 'deg');
+            span.style.animation = `floatUpHeart ${1 + Math.random() * 0.6}s ease-out forwards`;
+            floatingHeartsStage.appendChild(span);
+            setTimeout(() => {
+              if (span.parentNode) span.parentNode.removeChild(span);
+            }, 1600);
+          }
+        }
+      });
+
+      // Populate Footer Animated SVG Flower Garden
+      function renderFooterGarden() {
+        const svg = document.getElementById('footer-garden-svg');
+        if (!svg) return;
+
+        let markup = `
+          <path d="M0,120 Q360,70 720,120 T1440,110 L1440,180 L0,180 Z" fill="#f8bbd0" opacity="0.72" />
+          <path d="M0,145 Q400,105 850,145 T1440,135 L1440,180 L0,180 Z" fill="#f48fb1" opacity="0.65" />
+        `;
+
+        for (let i = 0; i < 18; i++) {
+          const x = 40 + i * 80;
+          const stemHeight = 45 + (i % 3) * 16;
+          const yTop = 155 - stemHeight;
+          const flowerType = i % 3;
+          const delay = ((i * 0.28) % 3).toFixed(2);
+
+          let blossom = '';
+          if (flowerType === 0) {
+            blossom = `
+              <g transform="translate(${x}, ${yTop})">
+                <circle cx="0" cy="0" r="14" fill="#ec407a" />
+                <circle cx="0" cy="0" r="8" fill="#ff8da1" />
+              </g>`;
+          } else if (flowerType === 1) {
+            blossom = `
+              <g transform="translate(${x}, ${yTop})">
+                <path d="M-11,4 C-14,-12 -4,-16 0,-6 C4,-16 14,-12 11,4 C6,12 -6,12 -11,4 Z" fill="#ab47bc" />
+              </g>`;
+          } else {
+            blossom = `
+              <g transform="translate(${x}, ${yTop})">
+                <circle cx="-7" cy="-5" r="7" fill="#ffffff" />
+                <circle cx="7" cy="-5" r="7" fill="#ffffff" />
+                <circle cx="-7" cy="5" r="7" fill="#ffffff" />
+                <circle cx="7" cy="5" r="7" fill="#ffffff" />
+                <circle cx="0" cy="0" r="6" fill="#ffca28" />
+              </g>`;
+          }
+
+          markup += `
+            <g class="animate-sway" style="animation-delay: ${delay}s;">
+              <line x1="${x}" y1="175" x2="${x}" y2="${yTop}" stroke="#4caf50" stroke-width="4" stroke-linecap="round" />
+              <ellipse cx="${x + 8}" cy="150" rx="8" ry="4" fill="#66bb6a" transform="rotate(-25 ${x + 8} 150)" />
+              ${blossom}
+            </g>
+          `;
+        }
+
+        svg.innerHTML = markup;
+      }
+
+      renderFooterGarden();
+
+      // Start Canvas Animation on Window Load
+      window.onload = function () {
+        initParticles();
+        drawParticles();
+      };
+    })();
+  </script>
+</body>
+</html>
